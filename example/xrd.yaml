@@ -1,0 +1,40 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: CompositeResourceDefinition
+metadata:
+ name: xlandingzones.xp-demo.crossplane.io
+spec:
+  group: xp-demo.crossplane.io
+  names:
+    kind: XLandingZone
+    plural: xlandingzones
+  claimNames:
+    kind: LandingZone
+    plural: landingzones
+  versions:
+  - name: v1alpha1
+    served: true
+    referenceable: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          spec:
+            type: object
+            properties:
+              team:
+                type: string
+                description: Team that will use this landing zone.
+              environment:
+                type: string
+                description: Environment where this landing zone will be consumed (e.g. dev, staging, or production).
+              tier:
+                type: string
+                description: Tier level of service for this landing zone (e.g. critical, standard, or low).
+              region:
+                type: string
+                description: Region where the resources will be created.
+                default: us-west-2
+            required:
+              - team
+              - environment
+              - tier

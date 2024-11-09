@@ -1,0 +1,18 @@
+---
+apiVersion: pkg.crossplane.io/v1
+kind: Function
+metadata:
+  name: function-auto-ready
+spec:
+  package: function-auto-ready # remember name of pre-cached package was function-auto-ready.xpkg
+  # when the packagePullPolicy is Never then we assume the package is already cached and you have provided the name
+  packagePullPolicy: Never
+---
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-nop
+spec:
+  package: provider-nop # remember name of pre-cached package was provider-nop.xpkg
+  # when the packagePullPolicy is Never then we assume the package is already cached and you have provided the name
+  packagePullPolicy: Never

@@ -1,0 +1,8 @@
+apiVersion: pkg.crossplane.io/v1
+kind: Function
+metadata:
+  name: demo-xfn-claim-com
+spec:
+  package: demo-xfn-claim-com # remember name of pre-cached package was demo-xfn-claim-com.xpkg
+  # when the packagePullPolicy is Never then we assume the package is already cached and you have provided the name
+  packagePullPolicy: Never

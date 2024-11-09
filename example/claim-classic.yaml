@@ -1,0 +1,13 @@
+apiVersion: xp-demo.crossplane.io/v1alpha1
+kind: LandingZone
+metadata:
+ name: landing-zone-dev
+ namespace: default
+spec:
+  team: core
+  environment: dev
+  tier: critical
+  region: eu-central-1
+  compositionSelector:
+    matchLabels:
+      ux: classic

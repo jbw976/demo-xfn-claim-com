@@ -1,0 +1,23 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: Composition
+metadata:
+ name: classic.xp-demo.crossplane.io
+ labels:
+   ux: classic
+spec:
+  writeConnectionSecretsToNamespace: crossplane-system
+  compositeTypeRef:
+    apiVersion: xp-demo.crossplane.io/v1alpha1
+    kind: XLandingZone
+  mode: Pipeline
+  pipeline:
+  - step: run-func
+    functionRef:
+      name: demo-xfn-claim-com
+    input:
+      apiVersion: template.fn.crossplane.io/v1beta1
+      kind: Inputs
+      ux: classic
+  - step: ready
+    functionRef:
+      name: function-auto-ready

@@ -1,0 +1,14 @@
+---
+apiVersion: pkg.crossplane.io/v1
+kind: Function
+metadata:
+  name: demo-xfn-claim-com
+spec:
+  package: xpkg.upbound.io/jaredorg/demo-xfn-claim-com:v0.0.3
+---
+apiVersion: pkg.crossplane.io/v1
+kind: Function
+metadata:
+  name: function-auto-ready
+spec:
+  package: xpkg.upbound.io/crossplane-contrib/function-auto-ready:v0.3.0
