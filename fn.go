@@ -68,7 +68,7 @@ func (f *Function) RunFunction(_ context.Context, req *fnv1.RunFunctionRequest) 
 	// check the forbidden combinations of env and tier
 	supportedTiers, ok := supportedTiersByEnv[env]
 	if !ok {
-		response.Fatal(rsp, errors.Wrapf(err, "unsupported environment: %q", env))
+		response.Fatal(rsp, errors.Errorf("unsupported environment: %q", env))
 		return rsp, nil
 	}
 	found := false
