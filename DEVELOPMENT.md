@@ -148,7 +148,7 @@ The build and set up the testing scenario again:
 
 Push a new version of the Function package to the Marketplace:
 ```
-export FUNCTION_VERSION="v0.0.3"
+export FUNCTION_VERSION="v0.0.4"
 crossplane xpkg push \
   --package-files=function-amd64.xpkg,function-arm64.xpkg \
   xpkg.upbound.io/jaredorg/demo-xfn-claim-com:${FUNCTION_VERSION}

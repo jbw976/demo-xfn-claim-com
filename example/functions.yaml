@@ -4,7 +4,7 @@ kind: Function
 metadata:
   name: demo-xfn-claim-com
 spec:
-  package: xpkg.upbound.io/jaredorg/demo-xfn-claim-com:v0.0.3
+  package: xpkg.upbound.io/jaredorg/demo-xfn-claim-com:v0.0.4
 ---
 apiVersion: pkg.crossplane.io/v1
 kind: Function
