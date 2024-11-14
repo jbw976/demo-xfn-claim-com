@@ -29,7 +29,7 @@ helm repo update
 helm install crossplane --namespace crossplane-system --create-namespace crossplane-stable/crossplane
 ```
 
-## Demo
+## Setup
 
 Install the `demo-xfn-claim-com` Function:
 ```
@@ -48,6 +48,8 @@ kubectl apply -f example/xrd.yaml
 kubectl apply -f example/composition-classic.yaml
 kubectl apply -f example/composition-modern.yaml
 ```
+
+## Demo
 
 Create a claim for this `LandingZone` abstraction, using the classic/old UX:
 ```
