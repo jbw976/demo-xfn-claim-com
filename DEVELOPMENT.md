@@ -1,5 +1,18 @@
 # Local Development
 
+## Run locally with `render`
+
+In one terminal, run the function with:
+```
+go run . --insecure --debug
+```
+
+In a second terminal, run the `render` command with the modern UX so we can see
+conditions/events being returned that target the claim:
+```
+crossplane render -x -r example/xr-modern.yaml example/composition-modern.yaml example/functions-dev.yaml
+```
+
 ## Build functions and providers
 
 ### Build function `demo-xfn-claim-com`

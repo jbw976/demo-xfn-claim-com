@@ -2,11 +2,12 @@ apiVersion: xp-demo.crossplane.io/v1alpha1
 kind: XLandingZone
 metadata:
  name: xlanding-zone-prod
+ namespace: default
 spec:
   team: core
   environment: production
-  tier: critical
+  tier: low
   region: eu-central-1
   compositionSelector:
     matchLabels:
-      style: code
+      ux: modern
