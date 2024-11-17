@@ -10,7 +10,7 @@ go run . --insecure --debug
 In a second terminal, run the `render` command with the modern UX so we can see
 conditions/events being returned that target the claim:
 ```
-crossplane render -x -r example/xr-modern.yaml example/composition-modern.yaml example/functions-dev.yaml
+crossplane render -x -r -s example/xr-modern.yaml example/composition-modern.yaml example/functions-dev.yaml
 ```
 
 ## Build functions and providers
